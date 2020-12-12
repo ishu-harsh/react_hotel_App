@@ -21,8 +21,15 @@ class ListingApi  extends Component {
 
     setFilteredData(filteredData){
         this.setState({ListData: filteredData})
+        if (filteredData === []){
+            return (
+                this.setState({ListData: filteredData})
+            )
+        }
+
     }
 
+  
 
     render(){
         // console.log(this.props.match.params.id)
@@ -33,7 +40,7 @@ class ListingApi  extends Component {
                 <div className="row">
                     <div className="col-md-2">
                         <RoomFilter roomPerType={data=>{this.setFilteredData(data)}}/>
-                        <CostFilter costPerType={data=>[this.setFilteredData(data)]}></CostFilter>
+                        <CostFilter costPerType={data=>{this.setFilteredData(data)}}></CostFilter>
                     </div>
                     <div className="col-md-10">
                     <ListingDisplay listRecord={this.state.ListData}> </ListingDisplay>

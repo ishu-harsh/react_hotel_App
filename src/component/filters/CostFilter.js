@@ -4,6 +4,17 @@ import axios from 'axios';
 const url = "https://developerfunnel.herokuapp.com/hotellist"
 
 class CostFilter extends Component {
+
+    noData = ()=>{
+        return(
+            <React.Fragment>
+                <h1>No data Found</h1>
+            </React.Fragment>
+        )
+    }
+
+
+
     costfilter = (event) => {
         let costtype= (event.target.value).split(',');
         let lcost = Number(costtype[0]);

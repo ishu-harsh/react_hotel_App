@@ -16,12 +16,12 @@ const Header =  ()=>{
                 <li className="nav-item active">
                      <Link className="nav-link" to="/">Home</Link>
                 </li>
-                {/* <li className="nav-item">
+                <li className="nav-item">
                 <Link to="/bookings" className="nav-link">Bookings</Link>
                 </li>
                 <li className="nav-item">
                 <Link to="/hotels" className="nav-link">Hotels</Link>
-                </li> */}
+                </li>
                 
                 </ul>
                 <form className="form-inline my-2 my-lg-0">

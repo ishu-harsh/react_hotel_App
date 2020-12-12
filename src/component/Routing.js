@@ -3,10 +3,9 @@ import ReactDOM from 'react-dom'
 import {BrowserRouter, Route,Router, Link} from 'react-router-dom'
 import Home from './Home/Home'
 import Bookings from './Bookings'
-import Hotels from './Hotels'
 import Header from './Header'
 import Footer from './Footer'
-
+import DetailsApi from './details/DetailsApi'
 import ListingApi from './listing/ListingApi'
 
 
@@ -22,7 +21,7 @@ const Routing = ()=>{
                     <Route exact path='/'component={Home}></Route>
                     <Route path='/bookings'component={Bookings}></Route>
                     <Route path='/list/:id'component={ListingApi}></Route>
-                    <Route path='/hotels'component={Hotels}></Route>
+                    <Route path='/details/:id'component={DetailsApi}></Route>
                 <Footer/>
                 </div>
             </BrowserRouter>
